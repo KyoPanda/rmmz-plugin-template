@@ -1,5 +1,5 @@
 import * as rmmz from 'rmmz';
 
-export function sayHi(): void {
-    console.warn(`Hello ${rmmz.$dataSystem.gameTitle}!`);
+export function sayHi(): string {
+    return `Hello ${rmmz.$dataSystem.gameTitle}!`;
 }

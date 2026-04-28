@@ -16,7 +16,7 @@
         "format:check": "prettier --check \"**/*.{ts,js,mjs,mts,json,yml,yaml,md}\"",
         "changeset": "changeset",
         "version": "changeset version",
-        "release": "changeset publish",
+        "release": "npm run build && changeset publish",
         "prebuild": "mz-mtdt -i ./plugin-metadata.yaml -o dist/annotations.js",
         "build": "rollup -c"
     },
@@ -46,16 +46,13 @@
         "eslint": "^10.2.1",
         "eslint-config-prettier": "^10.1.8",
         "prettier": "^3.8.3",
-        "rmmz": "github:niokasgami/rpg-maker-mz-typescript",
+        "rmmz": "github:niokasgami/Rpg-Maker-MZ-Typescript",
         "rollup": "^4.60.2",
         "rollup-plugin-external-globals": "^0.13.0",
         "tslib": "^2.8.1",
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.59.1",
         "vitest": "^4.1.5"
-    },
-    "dependencies": {
-        "@niokasgami/rpg-maker-mz-typescript": "github:niokasgami/rpg-maker-mz-typescript"
     },
     "overrides": {
         "uuid": "^14.0.0"
