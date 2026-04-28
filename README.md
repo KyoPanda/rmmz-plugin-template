@@ -4,7 +4,6 @@ This is a template repository for writing Typescript plugins for RPG Maker MZ.
 The main purpose here is to set a basis from which other repositories can
 derive from and more easily be ready to start actual development.
 
-
 ## Getting Started
 
 First of all, make sure you run `npm install` to install all the dependencies
@@ -30,16 +29,17 @@ By default, the plugin is wrapped into an IIFE and everything you export from
 **TL;DR**:
 
 First:
+
 - `npm install`
 - Modify `package.json`
 
 Then:
+
 - Modify `plugin-metadata.yaml` and write Typescript code on `src`
 - `npm run build`
 - Your plugin shows up compiled in `dist/js/plugins` (plus a debug build in
   whatever test directory you set up!)
 - Repeat
-
 
 ## Contributing
 

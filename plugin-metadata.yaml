@@ -1,7 +1,7 @@
 target: MZ
 author: Kyo Panda
 description: RPG Maker MZ Plugin Template
-help: |-  
+help: |-
     RPG Maker MZ Plugin Template.
 
     This is a plugin template, it does not provide any functionality, only a
