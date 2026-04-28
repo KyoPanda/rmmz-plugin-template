@@ -1,13 +1,21 @@
 {
-    "compilerOptions": {
-        "esModuleInterop": true,
-        "target": "ES5",
-        "lib": ["ES5", "ES6", "DOM"],
-        "downlevelIteration": true,
-        "removeComments": true,
-        "strictNullChecks": true,
-        "baseUrl": "src"
-    },
-    "include": ["src/**/*", "spec/**/*"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2015", "DOM"],
+
+    "rootDir": "./src",
+    "declaration": false,
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "noEmitOnError": true,
+    "isolatedModules": true,
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
