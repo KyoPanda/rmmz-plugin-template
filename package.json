@@ -1,6 +1,6 @@
 {
     "name": "RMMZPluginTemplate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "RPG Maker MZ Plugin Template",
     "namespace": "KyoPanda.Template",
     "testProjectDir": "../../games/Plugins/",
@@ -12,6 +12,9 @@
         "lint:fix": "eslint . --fix",
         "format": "prettier --write \"**/*.{ts,js,mjs,mts,json,yml,yaml,md}\"",
         "format:check": "prettier --check \"**/*.{ts,js,mjs,mts,json,yml,yaml,md}\"",
+        "changeset": "changeset",
+        "version": "changeset version",
+        "release": "changeset publish",
         "prebuild": "mz-mtdt -i ./plugin-metadata.yaml -o dist/annotations.js",
         "build": "rollup -c"
     },
@@ -25,6 +28,7 @@
     "author": "Kyo Panda",
     "license": "Zlib",
     "devDependencies": {
+        "@changesets/cli": "^2.31.0",
         "@comuns-rpgmaker/plugin-metadata": "^0.2.5",
         "@eslint/js": "^10.0.1",
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
