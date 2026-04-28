@@ -1,7 +1,7 @@
 {
     "name": "@kyopanda/rmmz-plugin-template",
     "pluginName": "RMMZPluginTemplate",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "private": false,
     "description": "RPG Maker MZ Plugin Template",
     "namespace": "KyoPanda.Template",
