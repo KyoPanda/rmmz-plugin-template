@@ -1,8 +1,9 @@
 {
-  "name": "rmmz-typescript-plugin-archetype",
+  "name": "rmmz-plugin-template",
   "version": "1.0.0",
-  "description": "RPG Maker MZ Typescript Plugin Archetype",
-  "namespace": "Comuns.Typescript.Archetype",
+  "description": "RPG Maker MZ Plugin Template",
+  "namespace": "KyoPanda.Template",
+  "testProjectDir": "../../games/Plugins/",
   "scripts": {
     "prebuild": "mz-mtdt -i ./plugin-metadata.yaml -o dist/annotations.js",
     "build": "rollup -c",
@@ -11,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/comuns-rpgmaker/typescript-plugin-archetype"
+    "url": "https://github.com/KyoPanda/rmmz-plugin-template"
   },
   "keywords": [
     "RMMZ"
   ],
-  "author": "Comuns",
+  "author": "Kyo Panda",
   "license": "Zlib",
   "devDependencies": {
     "@comuns-rpgmaker/plugin-metadata": "^0.2.5",
