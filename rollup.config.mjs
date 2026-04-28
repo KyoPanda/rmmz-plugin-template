@@ -23,7 +23,7 @@ export default {
     input: 'src/main.ts',
     output: [
         {
-            file: resolve(__dirname, `dist/js/plugins/${pkg.name}.js`),
+            file: resolve(__dirname, `dist/js/plugins/${pkg.pluginName}.js`),
             name: pkg.namespace,
             format: 'iife',
             sourcemap: false,
@@ -45,7 +45,7 @@ export default {
         {
             file: resolve(
                 __dirname,
-                `${pkg.testProjectDir || 'dist'}/js/plugins/${pkg.name}.debug.js`
+                `${pkg.testProjectDir || 'dist'}/js/plugins/${pkg.pluginName}.debug.js`
             ),
             name: pkg.namespace,
             format: 'iife',

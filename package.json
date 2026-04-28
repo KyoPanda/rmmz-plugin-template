@@ -1,6 +1,8 @@
 {
-    "name": "RMMZPluginTemplate",
-    "version": "1.0.1",
+    "name": "@kyopanda/rmmz-plugin-template",
+    "pluginName": "RMMZPluginTemplate",
+    "version": "1.0.2",
+    "private": false,
     "description": "RPG Maker MZ Plugin Template",
     "namespace": "KyoPanda.Template",
     "testProjectDir": "../../games/Plugins/",
@@ -20,13 +22,16 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/KyoPanda/rmmz-plugin-template"
+        "url": "git+https://github.com/KyoPanda/rmmz-plugin-template.git"
     },
     "keywords": [
         "RMMZ"
     ],
     "author": "Kyo Panda",
-    "license": "Zlib",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "devDependencies": {
         "@changesets/cli": "^2.31.0",
         "@comuns-rpgmaker/plugin-metadata": "^0.2.5",

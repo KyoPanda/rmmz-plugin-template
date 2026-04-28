@@ -1,0 +1,12 @@
+# .npmignore
+dist/annotations.js
+*.log
+coverage
+spec
+.vscode
+.github
+.changeset
+*.config.mjs
+*.config.mts
+.nvmrc
+.npmrc
