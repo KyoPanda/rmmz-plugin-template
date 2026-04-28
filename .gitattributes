@@ -1,0 +1,7 @@
+# .gitattributes
+* text=auto eol=lf
+
+# Force LF for all source/config files
+*.{ts,js,mjs,mts,json,yml,yaml,md,html,css,scss} text eol=lf
+*.gitattributes text eol=lf
+*.editorconfig text eol=lf
