@@ -1,4 +1,5 @@
-import * as rmmz from 'rmmz';
+import { pluginName } from '../package.json';
+import { PluginManager, $dataSystem } from 'rmmz';
 
 /**
  * Returns a greeting using the current game title.
@@ -8,12 +9,10 @@ import * as rmmz from 'rmmz';
  * sayHi(); // "Hello My Awesome Game!"
  */
 export function sayHi(): string {
-    return `Hello ${rmmz.$dataSystem.gameTitle}!`;
+    return `Hello ${$dataSystem.gameTitle}!`;
 }
 
 /**
- * Example Plugin Command
+ * Register the sayHi command with the plugin manager.
  */
-export const pluginCommands = {
-    sayHi: sayHi,
-};
+PluginManager.registerCommand(pluginName, 'sayHi', sayHi);

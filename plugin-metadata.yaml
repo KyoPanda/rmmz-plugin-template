@@ -6,3 +6,9 @@ help: |-
 
     This is a plugin template, it does not provide any functionality, only a
     template for other plugins.
+commands:
+    - name: sayHi
+      text: Say Hi!
+      description: |-
+          Say hi to the game title
+          example: sayHi(); // "Hello My Awesome Game!"

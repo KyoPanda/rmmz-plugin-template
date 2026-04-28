@@ -2,6 +2,7 @@
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import externalGlobals from 'rollup-plugin-external-globals';
+import json from '@rollup/plugin-json';
 
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
@@ -58,5 +59,6 @@ export default {
         externalGlobals({
             rmmz: 'window',
         }),
+        json(),
     ],
 };

@@ -40,6 +40,7 @@
         "@comuns-rpgmaker/plugin-metadata": "^0.2.5",
         "@eslint/js": "^10.0.1",
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
+        "@rollup/plugin-json": "^6.1.0",
         "@rollup/plugin-terser": "^1.0.0",
         "@rollup/plugin-typescript": "^12.3.0",
         "@types/jasmine": "^6.0.0",
