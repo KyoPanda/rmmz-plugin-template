@@ -1,1 +1,3 @@
-it('Does nothing', () => expect().nothing());
+it('Does nothing', () => {
+    expect(true).toBe(true);
+});

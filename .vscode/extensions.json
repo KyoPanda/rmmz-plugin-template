@@ -1,6 +1,9 @@
 {
     "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
         "redhat.vscode-yaml",
-        "ruakr.vsc-nwjs"
+        "ruakr.vsc-nwjs",
+        "vitest.explorer"
     ]
-}
+  }

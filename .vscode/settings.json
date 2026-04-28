@@ -1,9 +1,25 @@
 {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.tsdk": "node_modules/typescript/lib",
     "yaml.schemas": {
         "https://raw.githubusercontent.com/comuns-rpgmaker/plugin-metadata/master/schema/plugin-metadata.json": [
             "plugin-metadata.yml",
             "plugin-metadata.yaml",
             "plugin-metadata.json"
         ]
+    },
+    "files.exclude": {
+        "dist": true,
+        "node_modules": true,
+        "coverage": true
+    },
+    "search.exclude": {
+        "dist": true,
+        "node_modules": true
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     }
 }

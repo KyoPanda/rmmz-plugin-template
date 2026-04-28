@@ -4,12 +4,10 @@
         {
             "type": "nwjs",
             "request": "launch",
-            "name": "Launch Game",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "webRoot": "${workspaceFolder}\\..\\..",
-            "nwjsVersion": "0.44.5",
+            "name": "Launch RPG Maker Game",
+            "skipFiles": ["<node_internals>/**"],
+            "webRoot": "${workspaceFolder}/../..",
+            "nwjsVersion": "0.48.4.0",
             "preLaunchTask": "Build plugin"
         }
     ]
