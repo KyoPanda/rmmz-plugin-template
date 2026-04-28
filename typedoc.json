@@ -1,0 +1,14 @@
+{
+    "entryPoints": ["src/main.ts"],
+    "out": "docs/api",
+    "readme": "none",
+    "name": "@kyopanda/rmmz-plugin-template",
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "excludeExternals": true,
+    "plugin": ["typedoc-plugin-markdown"],
+    "hideGenerator": true,
+    "githubPages": false,
+    "categoryOrder": ["*"],
+    "sort": ["source-order"]
+}

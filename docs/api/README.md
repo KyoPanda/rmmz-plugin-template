@@ -1,6 +1,6 @@
 **@kyopanda/rmmz-plugin-template**
 
-***
+---
 
 # @kyopanda/rmmz-plugin-template
 

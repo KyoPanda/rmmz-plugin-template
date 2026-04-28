@@ -1,53 +1,98 @@
-# RPG Maker MZ - Typescript Plugin Archetype
+# RMMZ Plugin Template
 
-This is a template repository for writing Typescript plugins for RPG Maker MZ.
-The main purpose here is to set a basis from which other repositories can
-derive from and more easily be ready to start actual development.
+A modern, production-ready TypeScript template for **RPG Maker MZ** plugins.
 
-## Getting Started
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 
-First of all, make sure you run `npm install` to install all the dependencies
-for the project, such as [rollup.js](https://rollupjs.org/) and typescript.
+## Features
 
-Make sure to set `package.json` up correctly, changing the package name to that
-of your plugin (this will be used to generate the output file) and adjust the
-values of the `version` and `description` fields (and, optionally, `keywords`).
-Also make sure to add a property `testProjectDir` if you want to test your
-plugin (can be relative).
+- **TypeScript** + **Rollup 4** → single clean `.js` plugin file
+- `pluginName` field → clean PascalCase filename (separate from npm scoped name)
+- Vitest + full test coverage
+- ESLint (flat config) + Prettier
+- Changesets for automated versioning & changelog
+- GitHub Actions CI + Trusted Publishing to npm
+- Auto-generated API documentation with TypeDoc
+- Proper `.gitattributes`, `.npmignore`, and cross-platform support
 
-To configure plugin parameters and the likes, change `plugin-metadata.yaml`.
-Read more about it on [comuns-rpgmaker/plugin-metadata][plugin-metadata].
+## Quick Start
 
-[plugin-metadata]: https://github.com/comuns-rpgmaker/plugin-metadata
+### 1. Use this template
 
-Once you are done, `npm run build` will create a JS file for your plugin as
-`dist/js/plugins/{pkg.name}.js`.
+Click **"Use this template"** on GitHub or clone it:
 
-By default, the plugin is wrapped into an IIFE and everything you export from
-`./src/main.ts` is saved under a namespace to be configured in `package.json`.
+```bash
+git clone https://github.com/KyoPanda/rmmz-plugin-template.git my-awesome-plugin
+cd my-awesome-plugin
+```
 
-**TL;DR**:
+### 2. Install & configure
 
-First:
+```bash
+npm install
+```
 
-- `npm install`
-- Modify `package.json`
+Edit `package.json`:
 
-Then:
+- Change `"name"` to your scoped npm name (`@yourname/my-plugin`)
+- Set `"pluginName"` to your desired plugin filename (e.g. `MyPlugin`)
+- Update `"namespace"`, `"description"`, etc.
 
-- Modify `plugin-metadata.yaml` and write Typescript code on `src`
-- `npm run build`
-- Your plugin shows up compiled in `dist/js/plugins` (plus a debug build in
-  whatever test directory you set up!)
-- Repeat
+Set your test project path:
+
+```json
+"testProjectDir": "../../MyGameProject"
+```
+
+### 3. Development
+
+```bash
+npm run build          # Build + copy to test project
+npm test
+npm run lint
+npm run format
+```
+
+### 4. Documentation
+
+```bash
+npm run docs:markdown   # Generate API docs
+```
+
+Docs are automatically generated from JSDoc comments and committed via GitHub Actions.
+
+## Project Structure
+
+```text
+├── src/
+│   └── main.ts                 # Your plugin code
+├── dist/                       # Built plugin (gitignored)
+├── docs/api/                   # Auto-generated documentation
+├── .changeset/                 # Versioning
+├── plugin-metadata.yaml        # RPG Maker plugin header
+├── rollup.config.mjs
+├── typedoc.json
+└── ...
+```
+
+## Releasing
+
+- Create changesets with `npm run changeset`
+- Merge to `main` → automatic version bump + publish to npm (Trusted Publishing)
 
 ## Contributing
 
-This repo's purpose is **exclusively** providing a basic structure for other
-plugin repos.
-It is **not** the place to create core functionality! (i.e. no application
-code here!)
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-Changes to this repo **must not** demand that repos derived from it be changed,
-but it **should** be possible to update them to a more recent version of the
-archetype fairly easily.
+## License
+
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
+
+---
+
+**Based on** the excellent [typescript-plugin-archetype](https://github.com/comuns-rpgmaker/typescript-plugin-archetype).
+
+---
+
+Made with ❤️ for the RPG Maker MZ community.

@@ -1,6 +1,6 @@
 [**@kyopanda/rmmz-plugin-template**](../README.md)
 
-***
+---
 
 [@kyopanda/rmmz-plugin-template](../README.md) / pluginCommands
 

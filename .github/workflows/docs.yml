@@ -1,0 +1,44 @@
+name: Docs
+
+on:
+    push:
+        branches: [main]
+        paths:
+            - 'src/**'
+            - 'typedoc.json'
+            - '**.ts'
+    workflow_dispatch:
+
+jobs:
+    generate-docs:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version-file: '.nvmrc'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Generate API Documentation
+              run: npm run docs:markdown
+
+            - name: Commit & Push updated docs
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+
+                  if git diff --quiet docs/; then
+                    echo "No documentation changes."
+                  else
+                    git add docs/
+                    git commit -m "docs: update auto-generated API documentation" || true
+                    git push
+                  fi

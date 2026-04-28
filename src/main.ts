@@ -1,6 +1,5 @@
 import * as rmmz from 'rmmz';
 
-
 /**
  * Returns a greeting using the current game title.
  *
@@ -16,5 +15,5 @@ export function sayHi(): string {
  * Example Plugin Command
  */
 export const pluginCommands = {
-    sayHi: sayHi
+    sayHi: sayHi,
 };
